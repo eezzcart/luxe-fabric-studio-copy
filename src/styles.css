@@ -59,29 +59,37 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-gold: var(--gold);
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.145 0 0);
+  --ink: oklch(0.145 0 0);
+  --soft: oklch(0.978 0 0);
+  --gold: oklch(0.78 0.13 88);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.145 0 0);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.978 0 0);
+  --secondary-foreground: oklch(0.145 0 0);
+  --muted: oklch(0.978 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.978 0 0);
+  --accent-foreground: oklch(0.145 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.92 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.145 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +148,85 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  .font-display { font-family: var(--font-display); font-weight: 400; }
+
+  .ghost-blur {
+    backdrop-filter: saturate(160%) blur(14px);
+  }
+
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -4px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s cubic-bezier(.6,.04,.3,1);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .liquid-ripple {
+    position: absolute;
+    width: 12px; height: 12px;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.55);
+    transform: translate(-50%, -50%) scale(0);
+    animation: liquid 800ms cubic-bezier(.22,.61,.36,1) forwards;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: blur(2px);
+  }
+  @keyframes liquid {
+    0%   { transform: translate(-50%, -50%) scale(0); opacity: .9; border-radius: 50%; }
+    50%  { border-radius: 42% 58% 55% 45% / 50% 45% 55% 50%; }
+    100% { transform: translate(-50%, -50%) scale(30); opacity: 0; border-radius: 40% 60% 60% 40% / 55% 45% 55% 45%; }
+  }
+
+  .float-bubble {
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, var(--soft) 0%, oklch(0.95 0 0) 50%, var(--soft) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .animate-cart-pulse {
+    animation: cartPulse 800ms ease-out;
+  }
+  @keyframes cartPulse {
+    0%   { background-color: oklch(0.96 0.04 88); }
+    100% { background-color: transparent; }
+  }
+
+  .fade-up {
+    animation: fadeUp .9s cubic-bezier(.22,.61,.36,1) both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
