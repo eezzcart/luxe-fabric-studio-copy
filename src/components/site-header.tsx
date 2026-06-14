@@ -30,7 +30,7 @@ export function SiteHeader() {
           <Link to="/" className="link-underline">Women</Link>
           <Link to="/" className="link-underline">Men</Link>
           <Link to="/" className="link-underline">New</Link>
-          <Link to="/" className="link-underline">Editorial</Link>
+          <Link to="/contact" className="link-underline">Contact</Link>
         </div>
         <Link to="/" className="font-display text-[15px] md:text-[17px] tracking-[0.32em] uppercase">
           Bhat<span className="text-gold">·</span>Imported
