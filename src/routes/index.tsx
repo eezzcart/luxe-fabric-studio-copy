@@ -128,24 +128,59 @@ function Home() {
         </div>
       </section>
 
+      {/* STORE INFO */}
+      <section className="border-t border-ink/10 bg-soft">
+        <div className="mx-auto max-w-[1500px] px-5 md:px-10 py-20 md:py-28 grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-16">
+          <div className="md:col-span-2">
+            <p className="text-[10px] uppercase tracking-[0.36em] text-ink/55">Visit Us</p>
+            <h2 className="font-display text-3xl md:text-5xl mt-3">Bhat Imported Clothess</h2>
+            <p className="mt-6 text-sm text-ink/65 leading-relaxed max-w-md">
+              Singhpora Pattan, near J&amp;K Bank.<br />
+              Open daily <span className="text-ink">9:00 AM – 10:00 PM</span>.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="https://wa.me/919103174217" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 h-11 text-[11px] uppercase tracking-[0.22em] border border-ink/20 hover:border-ink transition-colors">
+                WhatsApp 9103174217
+              </a>
+              <a href="https://wa.me/918899507736" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 h-11 text-[11px] uppercase tracking-[0.22em] border border-ink/20 hover:border-ink transition-colors">
+                WhatsApp 8899507736
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.36em] text-ink/55">Instagram</p>
+            <a href="https://instagram.com/bhat_imported_clothess" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 font-display text-2xl md:text-3xl link-underline">@bhat_imported_clothess</a>
+            <div className="mt-5 flex gap-6 text-[11px] uppercase tracking-[0.22em] text-ink/55">
+              <span><strong className="text-ink">94</strong> Posts</span>
+              <span><strong className="text-ink">332</strong> Followers</span>
+              <span><strong className="text-ink">111</strong> Following</span>
+            </div>
+            <p className="mt-4 text-xs text-ink/55 leading-relaxed">
+              Highlights: Stock updates, our physical location &amp; store openings.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-ink text-white/80">
         <div className="mx-auto max-w-[1500px] px-5 md:px-10 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2">
             <div className="font-display text-xl tracking-[0.3em] uppercase text-white">Bhat<span className="text-gold">·</span>Imported</div>
-            <p className="mt-4 text-sm max-w-sm">An independent edit of imported designer fashion. Curated from across the world, delivered with care.</p>
+            <p className="mt-4 text-sm max-w-sm">Imported designer fashion curated for you. Visit our store at Singhpora Pattan, near J&amp;K Bank — open daily 9 AM – 10 PM.</p>
           </div>
           <div className="space-y-2 text-[11px] uppercase tracking-[0.22em]">
-            <p className="text-white/45 mb-3">Shop</p>
+            <p className="text-white/45 mb-3">Shop:Shop</p>
             <p>Women</p><p>Men</p><p>New In</p>
           </div>
           <div className="space-y-2 text-[11px] uppercase tracking-[0.22em]">
             <p className="text-white/45 mb-3">Service</p>
-            <p>Size Guide</p><p>Shipping</p><p>Contact</p>
+            <p>Size Guide</p><p>Shipping</p>
+            <a href="https://wa.me/919103174217" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">WhatsApp</a>
           </div>
         </div>
         <div className="border-t border-white/10 py-6 text-center text-[11px] uppercase tracking-[0.3em] text-white/45">
-          © {new Date().getFullYear()} Bhat Imported Clothes
+          © {new Date().getFullYear()} Bhat Imported Clothess
         </div>
       </footer>
 
