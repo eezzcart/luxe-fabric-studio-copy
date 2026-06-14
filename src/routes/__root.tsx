@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bhat Imported Clothes — Exclusive Global Fashion" },
-      { name: "description", content: "Curated imported fashion. A minimalist luxury edit of pieces from around the world." },
-      { property: "og:title", content: "Bhat Imported Clothes" },
-      { property: "og:description", content: "Curated imported fashion. A minimalist luxury edit." },
+      { title: "Bhat Imported Clothess — Singhpora Pattan" },
+      { name: "description", content: "Bhat Imported Clothess — imported fashion curated at Singhpora Pattan, near J&K Bank. Open daily 9 AM – 10 PM. WhatsApp 9103174217." },
+      { property: "og:title", content: "Bhat Imported Clothess" },
+      { property: "og:description", content: "Imported fashion curated at Singhpora Pattan, near J&K Bank. Open daily 9 AM – 10 PM." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@bhat_imported_clothess" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
