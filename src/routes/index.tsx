@@ -170,7 +170,7 @@ function Home() {
             <p className="mt-4 text-sm max-w-sm">Imported designer fashion curated for you. Visit our store at Singhpora Pattan, near J&amp;K Bank — open daily 9 AM – 10 PM.</p>
           </div>
           <div className="space-y-2 text-[11px] uppercase tracking-[0.22em]">
-            <p className="text-white/45 mb-3">Shop:Shop</p>
+            <p className="text-white/45 mb-3">Shop</p>
             <p>Women</p><p>Men</p><p>New In</p>
           </div>
           <div className="space-y-2 text-[11px] uppercase tracking-[0.22em]">
