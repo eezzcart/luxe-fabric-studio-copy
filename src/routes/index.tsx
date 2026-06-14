@@ -13,10 +13,10 @@ import cat2 from "@/assets/category-2.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bhat Imported Clothes — Exclusive Global Fashion" },
-      { name: "description", content: "Curated imported fashion. A minimalist luxury edit of pieces from around the world." },
-      { property: "og:title", content: "Bhat Imported Clothes" },
-      { property: "og:description", content: "Curated imported fashion. A minimalist luxury edit." },
+      { title: "Bhat Imported Clothess — Singhpora Pattan" },
+      { name: "description", content: "Bhat Imported Clothess — curated imported fashion at Singhpora Pattan, near J&K Bank. Open daily 9 AM – 10 PM. Follow @bhat_imported_clothess." },
+      { property: "og:title", content: "Bhat Imported Clothess" },
+      { property: "og:description", content: "Curated imported fashion at Singhpora Pattan, near J&K Bank. Open daily 9 AM – 10 PM." },
     ],
   }),
   component: Home,
