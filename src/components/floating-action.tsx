@@ -24,12 +24,48 @@ function FAB({
   delay?: string;
 }) {
   const [hover, setHover] = useState(false);
-  const baseClass = cn(
+  const className = cn(
     "float-bubble group flex items-center gap-2 rounded-full bg-ink text-white pl-3 pr-4 h-11 shadow-[0_8px_30px_rgba(11,11,11,0.18)] transition-[width,padding] duration-500 overflow-hidden",
   );
-  const inner = (
+
+  const children = (
     <>
       <span className="shrink-0">{icon}</span>
       <span
         className={cn(
-: 18.38,
+          "whitespace-nowrap text-[11px] tracking-[0.18em] uppercase transition-[max-width,opacity,margin] duration-500",
+          hover ? "max-w-[260px] opacity-100 ml-1" : "max-w-0 opacity-0 ml-0",
+        )}
+      >
+        {label}
+      </span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{ animationDelay: delay }}
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{ animationDelay: delay }}
+      className={className}
+    >
+      {children}
+    </button>
+  );
+}
